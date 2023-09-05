@@ -1,5 +1,5 @@
-let array = ["darmanin ",
-    "macron ",
+let array = ["darmanin",
+    "macron",
     "zemmour",
     "le pen",
     "manif pour tous",
@@ -23,5 +23,5 @@ let array = ["darmanin ",
     "désencerclement",
     "museler",
 ]
-export { array }
+module.exports = { array };
 // les mots méchants du web 
