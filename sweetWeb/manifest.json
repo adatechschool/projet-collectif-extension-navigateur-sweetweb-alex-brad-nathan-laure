@@ -2,28 +2,32 @@
   "manifest_version": 3,
   "name": "Sweet Web",
   "version": "1.0",
-
   "description": "Remplacer tous les mots discriminants, racistes et autres termes pouvant nuires à ton bonheur pour rendre le web plus doux",
-
   "background": {
     "service_worker": "background.js"
   },
-
-  "content_scripts": [ {
-    "matches": ["<all_urls>"],
-    "js": ["script.js"],
-    "css": ["style.css"]
-  }],
-
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "script.js"
+      ],
+      "css": [
+        "style.css"
+      ]
+    }
+  ],
   "action": {
     "default_icon": {
       "48": "icons/48.png"
     }
   },
   "icons": {
-    "48": "icons/48.png"
+    "48": "icons/48.png",
+    "128": "icons/128.png"
   },
-
   "permissions": [
     "unlimitedStorage",
     "notifications"
