@@ -19,7 +19,6 @@
       ]
     }
   ],
-
   "action": {
     "default_popup": "main.html",
     "default_icon": {
@@ -33,6 +32,6 @@
   "permissions": [
     "unlimitedStorage",
     "notifications",
-    "management"
+    "activeTab"
   ]
 }

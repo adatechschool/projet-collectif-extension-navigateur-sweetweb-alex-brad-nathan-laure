@@ -33,7 +33,6 @@ function insertInRegex(textToAdd) {
     return regex
 }
 
-// fonction qui parcoure tous les éléments du DOM
 function replaceText(element, toReplace) {
     // vérifie si l'élément parcouru a des noeuds enfants
     if (element.hasChildNodes()) {
@@ -51,3 +50,18 @@ function replaceText(element, toReplace) {
         }
     }
 }
+
+const activationCheckBox = document.getElementById('check')
+
+activationCheckBox.addEventListener('change', function(){
+    chrome.runtime.sendMessage({action: 'toggleActivation'}, function(response){
+        if(response && response.activated){
+            console.log('Activated!')
+            replaceText(document.body, toReplace)
+        } else { 
+            console.log('Deactivated')
+            // location.reload(true);
+        }
+    })
+})
+
