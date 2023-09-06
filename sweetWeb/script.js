@@ -52,4 +52,14 @@ function replaceText(element, toReplace) {
     }
 }
 
-replaceText(document.body, toReplace)
+const checkbox = document.getElementById("check")
+
+checkbox.addEventListener("change", function() {
+    if(checkbox.checked) {
+        replaceText(document.body, toReplace)
+        location.reload(true);
+        // console.log("button click")
+    } else {
+        location.reload(true);
+    }
+})
