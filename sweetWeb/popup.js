@@ -1,5 +1,5 @@
 (()=>{
-    const button = document.getElementById('myButton');
+    const button = document.getElementById('myCheckbox');
     button.addEventListener('click', function () {
         console.log('clicked')
 
