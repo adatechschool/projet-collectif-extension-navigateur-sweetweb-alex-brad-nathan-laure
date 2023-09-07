@@ -1,8 +1,11 @@
 {
   "manifest_version": 3,
-  "name": "Sweet Web",
-  "version": "1.1",
-  "description": "Remplacer tous les mots discriminants, racistes et autres termes pouvant nuires à ton bonheur pour rendre le web plus doux",
+  "name": "Message Test",
+  "version": "1.0",
+  "description": "Practice Test",
+  "action": {
+    "default_popup": "popup/popup.html"
+  },
   "background": {
     "service_worker": "background.js"
   },
@@ -12,26 +15,15 @@
         "<all_urls>"
       ],
       "js": [
-        "script.js"
-      ],
-      "css": [
-        "style.css"
+        "content.js"
       ]
     }
   ],
-  "action": {
-    "default_popup": "main.html",
-    "default_icon": {
-      "48": "icons/48.png"
-    }
-  },
-  "icons": {
-    "48": "icons/48.png",
-    "128": "icons/128.png"
-  },
   "permissions": [
     "unlimitedStorage",
     "notifications",
-    "activeTab"
+    "activeTab",
+    "tabs",
+    "scripting"
   ]
 }

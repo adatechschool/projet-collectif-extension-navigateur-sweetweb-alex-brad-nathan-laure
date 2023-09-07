@@ -24,7 +24,7 @@ let banWords = ["darmanin",
     "museler",
 ]
 
-let toReplace = '';
+const toReplace = ""
 
 // Insère une chaîne de caractère dans une Regex
 function insertInRegex(textToAdd) {
@@ -51,3 +51,15 @@ function replaceText(element, toReplace) {
         }
     }
 }
+
+chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+    console.log(
+      sender.tab ? "from a content script" + sender.tab.url : "from the extension/popup",request);
+      if(request){
+        replaceText(document.body,toReplace)
+      }
+})
+
+// replaceText(document.body,toReplace)
+
+
