@@ -1,10 +1,13 @@
 {
   "manifest_version": 3,
-  "name": "Message Test",
+  "name": "Sweet Web",
   "version": "1.0",
-  "description": "Practice Test",
+  "description": "Hearts everywhere!!!!!!!!!!!!!!!!",
   "action": {
-    "default_popup": "popup.html"
+    "default_popup": "main.html",
+    "default_icon": {
+      "48": "icons/48.png"
+    }
   },
   "background": {
     "service_worker": "background.js"
@@ -25,5 +28,9 @@
     "activeTab",
     "tabs",
     "scripting"
-  ]
+  ],
+  "icons": {
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  }
 }
