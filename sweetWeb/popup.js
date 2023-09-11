@@ -3,7 +3,7 @@
     button.addEventListener('click', function () {
         console.log('clicked')
         enabledDisabled()
-        //appel de la fonction 
+        //appel des fonctions
 
         chrome.runtime.sendMessage({ greeting: 'Hello' }).then(response =>
             console.log(response))
@@ -25,10 +25,20 @@ function enabledDisabled() {
     })
 }
 
-function buttonSwitch() {
-    console.log('switch')
-    document.querySelector('#changeButtonState').innerHTML = `    <input id="myCheckbox" type="checkbox" value="yes" checked />
-            <span class="slider round"></span>`
-}
+// function buttonSwitch() {
+//     console.log('switch')
+//     chrome.storage.local.get(["enabled"]).then((result) => {
+//         if (result.enabled === true) {
+//             console.log('True -> button checked')
+//             document.querySelector('#changeButtonState').innerHTML = `    <input id="myCheckbox" type="checkbox" value="yes" checked />
+//             <span class="slider round"></span>`
+//         } else {
+//             console.log('False -> button unchecked')
+//             document.querySelector('#changeButtonState').innerHTML = `    <input id="myCheckbox" type="checkbox" value="yes" />
+//             <span class="slider round"></span>`
+//         }
+//     })
+// }
 
-buttonSwitch()
+
+
