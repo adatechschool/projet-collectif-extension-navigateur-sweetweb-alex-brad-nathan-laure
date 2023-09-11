@@ -27,7 +27,8 @@
     "notifications",
     "activeTab",
     "tabs",
-    "scripting"
+    "scripting",
+    "storage"
   ],
   "icons": {
     "48": "icons/48.png",
