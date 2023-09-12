@@ -24,6 +24,34 @@ let banWords = ["darmanin",
     "museler",
 ]
 
+// récupérer la requête provenant du background (f° remplacement de texte)
+chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+    // console.log(
+    //     sender.tab ? "from a content script" + sender.tab.url : "from the extension/popup", request);
+    if (request === 'CouCou') {
+        replaceText(document.body, toReplace)
+    }
+})
+
+// récupérer la requête provenant du background (f° ajouter banword)
+chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+    console.log(
+        sender.tab ? "from a content script" + sender.tab.url : "from the extension/popup", request);
+    if (request != 'CouCou') {
+        // mettre dans le local storage
+        chrome.storage.local.set({ testing: `${request}` }).then(() => {
+            console.log('value is set')
+            chrome.storage.local.get(["testing"]).then((result) => {
+                console.log("[SCRIPT] Value currently is  " + result.testing);
+                let tempo = result.testing;
+                console.log(tempo + ' of type:' + typeof (tempo));
+
+                banWords.push(tempo);
+            });
+        })
+    }
+})
+
 const toReplace = ""
 
 // Insère une chaîne de caractère dans une Regex
@@ -52,14 +80,7 @@ function replaceText(element, toReplace) {
     }
 }
 
-chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
-    console.log(
-      sender.tab ? "from a content script" + sender.tab.url : "from the extension/popup",request);
-      if(request){
-        replaceText(document.body,toReplace)
-      }
-})
 
-// replaceText(document.body,toReplace)
+
 
 
