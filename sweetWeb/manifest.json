@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Sweet Web",
   "version": "1.0",
-  "description": "Hearts everywhere!!!!!!!!!!!!!!!!",
+  "description": "Hearts&Cats everywhere!!!!!!!!!!!!!!!!",
   "action": {
     "default_popup": "main.html",
     "default_icon": {
