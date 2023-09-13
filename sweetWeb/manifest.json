@@ -23,8 +23,6 @@
     }
   ],
   "permissions": [
-    "unlimitedStorage",
-    "notifications",
     "activeTab",
     "tabs",
     "scripting",
