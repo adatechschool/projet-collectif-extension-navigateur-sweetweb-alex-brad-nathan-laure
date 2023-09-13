@@ -29,6 +29,7 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     // console.log(
     //     sender.tab ? "from a content script" + sender.tab.url : "from the extension/popup", request);
     if (request === 'CouCou') {
+        addToBanWords()
         replaceText(document.body, toReplace)
     }
 })
