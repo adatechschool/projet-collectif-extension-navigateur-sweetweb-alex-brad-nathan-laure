@@ -19,17 +19,13 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
       : "from the extension/popup",
     request
   );
-  if(!(request.greeting === 'Hello')){
+  if (!(request.greeting === 'Hello')) {
     sendMessageToActiveTab(request.banWord)
     console.log('banWord received :' + request.banWord)
   }
   sendResponse({ farewell: "Goodbyeeeeeeeee" });
 
 });
-
-
-
-
 
 // fonction pour envoyer message au script
 async function sendMessageToActiveTab(message) {

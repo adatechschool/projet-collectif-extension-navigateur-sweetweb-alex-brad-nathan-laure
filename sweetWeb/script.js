@@ -58,17 +58,10 @@ function stockLocalStorage(newBanWord, storedStrings) {
     localStorage.setItem('storedStrings', JSON.stringify(storedStrings));
 }
 
-// function addToBanWords() {
-//     let storedWords = localStorage.storedStrings
-//     console.log(typeof (storedWords))
-//     console.log(banWords)
-//     banWords.push(storedWords)
-// }
-
 function addToBanWords() {
 
-  const storedWords = JSON.parse(localStorage.getItem('storedStrings')) || [];
-  banWords = [...banWords, ...storedWords];
+    const storedWords = JSON.parse(localStorage.getItem('storedStrings')) || [];
+    banWords = [...banWords, ...storedWords];
 }
 
 

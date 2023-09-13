@@ -8,65 +8,19 @@
   text-align: center;
 }
 
-/* The switch - the box around the slider */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 40px;
-  height: 22px;
+.container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
 }
 
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 17px;
-  width: 17px;
-  left: 3px;
-  bottom: 3px;
+#myCheckbox {
   background-color: rgb(82, 190, 82);
-  -webkit-transition: .4s;
-  transition: .4s;
+  padding: 5px;
 }
 
-input:checked + .slider {
+
+#banWordButton {
   background-color: crimson;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px crimson;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(17px);
-  -ms-transform: translateX(17px);
-  transform: translateX(17px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
+  padding: 5px;
 }
