@@ -66,10 +66,18 @@ function stockLocalStorage(newBanWord, storedStrings) {
 // }
 
 function addToBanWords() {
+<<<<<<< HEAD
+    let storedWords = localStorage.storedStrings;
+    console.log(typeof (storedWords));
+    console.log(banWords);
+    banWords.push(storedWords);
+};
+=======
   const storedWords = JSON.parse(localStorage.getItem('storedStrings')) || [];
   banWords = [...banWords, ...storedWords];
 }
 
+>>>>>>> 3952a9cdef08a04cb5d5412b7f1933c8bda5db62
 
 
 const toReplace = ""
@@ -95,7 +103,7 @@ function replaceText(element, toReplace) {
         for (i = 0; i < banWords.length; i++) {
             toReplace = insertInRegex(banWords[i])
             console.log(toReplace)
-            element.textContent = element.textContent.replace(toReplace, '💗💗😻💗💗');
+            element.textContent = element.textContent.replace(toReplace, '🦄💗😻💗🐕💗');
         }
     }
 }
