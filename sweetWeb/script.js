@@ -48,6 +48,7 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
 function checkLocalStorage() {
     let storedStrings = localStorage.getItem('storedStrings');
     storedStrings = storedStrings ? JSON.parse(storedStrings) : [];
+    console.log('essai', storedStrings)
     return storedStrings;
 }
 
@@ -56,12 +57,26 @@ function stockLocalStorage(newBanWord, storedStrings) {
     localStorage.setItem('storedStrings', JSON.stringify(storedStrings));
 }
 
+// function addToBanWords() {
+//     let storedWords = localStorage.storedStrings
+//     console.log(typeof (storedWords))
+//     console.log(banWords)
+//     banWords.push(storedWords)
+// }
+
 function addToBanWords() {
+<<<<<<< HEAD
     let storedWords = localStorage.storedStrings;
     console.log(typeof (storedWords));
     console.log(banWords);
     banWords.push(storedWords);
 };
+=======
+  const storedWords = JSON.parse(localStorage.getItem('storedStrings')) || [];
+  banWords = [...banWords, ...storedWords];
+}
+
+>>>>>>> 3952a9cdef08a04cb5d5412b7f1933c8bda5db62
 
 
 const toReplace = ""
@@ -91,8 +106,3 @@ function replaceText(element, toReplace) {
         }
     }
 }
-
-
-
-
-
