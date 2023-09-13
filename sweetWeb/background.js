@@ -19,9 +19,11 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
       : "from the extension/popup",
     request
   );
-  console.log('banWord received :' + request.banWord)
-  sendMessageToActiveTab(request.banWord)
-  // sendResponse({ farewell: "Goodbyeeeeeeeee" });
+  if(!(request.greeting === 'Hello')){
+    sendMessageToActiveTab(request.banWord)
+    console.log('banWord received :' + request.banWord)
+  }
+  sendResponse({ farewell: "Goodbyeeeeeeeee" });
 
 });
 
@@ -34,5 +36,4 @@ async function sendMessageToActiveTab(message) {
   const [tab] = await chrome.tabs.query({ active: true, lastFocusedWindow: true });
 
   const response = await chrome.tabs.sendMessage(tab.id, message);
-
 }

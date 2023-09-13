@@ -48,6 +48,7 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
 function checkLocalStorage() {
     let storedStrings = localStorage.getItem('storedStrings');
     storedStrings = storedStrings ? JSON.parse(storedStrings) : [];
+    console.log('essai', storedStrings)
     return storedStrings;
 }
 
@@ -56,11 +57,16 @@ function stockLocalStorage(newBanWord, storedStrings) {
     localStorage.setItem('storedStrings', JSON.stringify(storedStrings));
 }
 
+// function addToBanWords() {
+//     let storedWords = localStorage.storedStrings
+//     console.log(typeof (storedWords))
+//     console.log(banWords)
+//     banWords.push(storedWords)
+// }
+
 function addToBanWords() {
-    let storedWords = localStorage.storedStrings
-    console.log(typeof (storedWords))
-    console.log(banWords)
-    banWords.push(storedWords)
+  const storedWords = JSON.parse(localStorage.getItem('storedStrings')) || [];
+  banWords = [...banWords, ...storedWords];
 }
 
 
@@ -89,11 +95,7 @@ function replaceText(element, toReplace) {
             toReplace = insertInRegex(banWords[i])
             console.log(toReplace)
             element.textContent = element.textContent.replace(toReplace, '💗💗😻💗💗');
+            banWords = [...banWords, ...storedWords];
         }
     }
 }
-
-
-
-
-

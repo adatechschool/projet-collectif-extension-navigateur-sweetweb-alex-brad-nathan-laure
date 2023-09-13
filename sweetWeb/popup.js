@@ -18,6 +18,7 @@
         console.log('banword is coming');
         let test = '';
         test = window.prompt('Enter a banword you want to add to block it:');
+        console.log('essai 2', test)
         chrome.runtime.sendMessage({ banWord: `${test}` }).then(response =>
             console.log(response))
     })
@@ -63,6 +64,3 @@
 //         }
 //     })
 // }
-
-
-
