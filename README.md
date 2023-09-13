@@ -7,7 +7,7 @@ Alexandre, Bradley Nathan et Laure vous présentent l'extension web crossplatefo
 
 - SweetWeb, pour rendre le web plus doux.
 
-L'idée de départ, c'était de créer une application qui permettrait de remplacer les mots méchants par des images de bisounours. Finalement, nous avons optés pour les emojis 💗 et 😻.
+L'idée de départ, c'était de créer une application qui permettrait de remplacer les mots méchants par des images de bisounours. Finalement, nous avons optés pour les emojis 🦄 🐕 😻 et 💓. 
 
 ## 📅 1 Comment nous sommes nous organisés ?
 
@@ -52,24 +52,24 @@ Avec ce challenge, ce projet de groupe, nous avons eu surtout des défis techniq
 
 ## 📣 4 La communication mise en place
 
-La communication a toujours été bienveillante et agréable. Malgré les difficultés rencontrées.  Nous étions 4, nous avons alternés les binomes en fonction de notre organisation journalière, les progrès de chacun étaient communiqué tout au long de la journée. 
+La communication a toujours été bienveillante et agréable malgré les difficultés rencontrées.  Nous étions 4, nous avons alternés les binômes en fonction de notre organisation journalière, les progrès de chacun étaient communiqué tout au long de la journée. Nous avons aussi travaillés en solo ou à 4. 
 
-On ne peut rever mieux pour travailler en équipe, car tout s'est fait en douceur. En même temps, nous sommes les porte-étendards de la douceur sur le web et de la bienveillance 💟
+On ne peut rever mieux pour travailler en équipe, car tout s'est fait en douceur. En même temps, nous sommes les portes-étendards de la douceur sur le web et de la bienveillance 💟
 
 ## 😷 5 La gestion des absents 
 
-Nous avons du malheureusement faire face à plusieurs absents au sein de notre équipe (les virus n'ont pas décidés d'être doux avec nous) et il a fallut adapté notre manière de travailler. 
-Encore une fois, cela s'est fait de manière très naturelle. Nous tenions informé la personne absente de nos avancées (ou non) via la messagerie Slack.
+Nous avons du malheureusement faire face à plusieurs absents au sein de notre équipe (les virus n'ont pas décidés d'être doux avec nous) et il a fallut adapter notre manière de travailler. 
+Encore une fois, cela s'est fait de manière très naturelle. Nous tenions informé la personne absente de nos avancées (ou non) via la messagerie Slack et du journal de bord.
 
 ## 💾 6 Installation 
 
 ### 🛠️ Installation    
 
-l'installation se fait via le navigateur, il faut selectionner le mode développeur.
+L'installation se fait via le navigateur, il faut selectionner le mode développeur.
 
-Ensuite, aller sur la page de gestion des extensions (ou taper about:debugging dans la barre de recherche sur firefox).
+Ensuite, aller sur la page de gestion des extensions (ou taper about:debugging dans la barre de recherche sur Firefox).
 
-Il faut télécharger le dossier SweetWeb via le bouton "charger extension non enpaquetée", sur les navigateurs Edge, Chrome et Brave.
+Il faut télécharger le dossier sweetWeb via le bouton "charger extension non enpaquetée", sur les navigateurs Edge, Chrome et Brave.
 
 Pour Firefox, une fois la page chargée, cliquer sur "Ce firefox". Là, vous allez cliquer sur le bouton "Charger un module complémentaire" et vous allez selectionner votre manifest.json dans le dossier sweetWeb-Firefox.
 Et Voilà ! 
