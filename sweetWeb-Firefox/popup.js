@@ -1,43 +1,28 @@
+// envoie un message au background (f° remplacement de texte)
 (() => {
     const button = document.getElementById('myCheckbox');
     button.addEventListener('click', function () {
         console.log('clicked')
-        enabledDisabled()
-         //appel de la fonction 
-        browser.runtime.sendMessage({greeting:'Hello'}).then(response =>
+        // enabledDisabled()
+
+        //appel des fonctions
+        browser.runtime.sendMessage({ greeting: 'Hello' }).then(response =>
             console.log(response))
     })
-})()
+})();
 
-function enabledDisabled() {
-    browser.storage.local.get(["enabled"]).then((result) => {
-        if (result.enabled === true) {
-            browser.storage.local.set({ enabled: false }).then(() => {
-                console.log(result.enabled)
-            })
-        }
-        else {
-            browser.storage.local.set({ enabled: true }).then(() => {
-                console.log(result.enabled)
-            })
-        }
+// envoie un message au background (f° ajouter des banwords)
+(() => {
+    const banWordButton = document.getElementById('banWordButton');
+    banWordButton.addEventListener('click', function () {
+        console.log('banword is coming');
+        let test = '';
+        test = window.prompt('Enter a banword you want to add to block it:');
+        console.log('essai 2', test)
+        browser.runtime.sendMessage({ banWord: `${test}` }).then(response =>
+            console.log(response))
     })
-}
-
-// function buttonSwitch() {
-//     console.log('switch')
-//     browser.storage.local.get(["enabled"]).then((result) => {
-//         if (result.enabled === true) {
-//             console.log('True -> button checked')
-//             document.querySelector('#changeButtonState').innerHTML = `    <input id="myCheckbox" type="checkbox" value="yes" checked />
-//             <span class="slider round"></span>`
-//         } else {
-//             console.log('False -> button unchecked')
-//             document.querySelector('#changeButtonState').innerHTML = `    <input id="myCheckbox" type="checkbox" value="yes" />
-//             <span class="slider round"></span>`
-//         }
-//     })
-// }
+})();
 
 
 
