@@ -3,25 +3,6 @@ let banWords = ["darmanin",
     "zemmour",
     "le pen",
     "manif pour tous",
-    "islamogauchiste",
-    "réponses fermes",
-    "forces de l'ordre",
-    "sanctions",
-    "interdiction",
-    "violences policières",
-    "violamment réprimée",
-    "eco-terroristes",
-    "assassinat",
-    "surveillance",
-    "répression",
-    "condamnations",
-    "criminalisation",
-    "dissoudre",
-    "démocrature",
-    "dictature",
-    "grenades assourdissantes",
-    "désencerclement",
-    "museler",
 ]
 
 const toReplace = ""
@@ -62,7 +43,7 @@ function stockLocalStorage(newBanWord, storedStrings) {
     localStorage.setItem('storedStrings', JSON.stringify(storedStrings));
 }
 
-// spread operator ("..."") ==> concaténation de deux tableaux pour en faire un seul
+// spread operator ("...") ==> concaténation de deux tableaux pour en faire un seul
 function addToBanWords() {
     const storedWords = JSON.parse(localStorage.getItem('storedStrings')) || [];
     banWords = [...banWords, ...storedWords];
@@ -76,7 +57,7 @@ function insertInRegex(textToAdd) {
     return regex
 }
 
-// fonction qui parcoure tous les éléments du DOM
+// fonction qui parcourt tous les éléments du DOM
 function replaceText(element, toReplace) {
     // vérifie si l'élément parcouru a des noeuds enfants
     if (element.hasChildNodes()) {
