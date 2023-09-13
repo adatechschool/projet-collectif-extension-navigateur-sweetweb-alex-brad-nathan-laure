@@ -30,6 +30,5 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
 // fonction pour envoyer message au script
 async function sendMessageToActiveTab(message) {
   const [tab] = await chrome.tabs.query({ active: true, lastFocusedWindow: true });
-
   const response = await chrome.tabs.sendMessage(tab.id, message);
 }

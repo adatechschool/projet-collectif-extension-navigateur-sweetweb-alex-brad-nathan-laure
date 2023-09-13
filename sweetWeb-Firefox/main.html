@@ -2,20 +2,23 @@
 
 <head>
   <link rel="stylesheet" href="style.css" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'nonce-rCkDzsvsdcsd+0fr8ylGr' 'self' "
+  />
 </head>
 <html>
+  <body>
+    <img class="logo" src="images/logo.png" alt="logo extension" />
+    <h2 class="text">Pour rendre le web plus doux</h2>
 
-<body>
-  <img class="logo" src="images/logo.png" alt="logo extension" />
-  <h2 class="text">Pour rendre le web plus doux</h2>
+    <!-- Rounded switch -->
+    <label id="changeButtonState" class="switch">
+      <input id="myCheckbox" type="checkbox" value="yes" />
+      <span class="slider round"></span>
+    </label>
 
-  <!-- Rounded switch -->
-  <label id="changeButtonState" class="switch">
-    <input id="myCheckbox" type="checkbox" value="yes" />
-    <span class="slider round"></span>
-  </label>
-  <script src="popup.js"></script>
-  <script src="background.js"></script>
-</body>
-
+    <button type="button" id="banWordButton">add a custom banWord</button>
+    <script src="popup.js"></script>
+  </body>
 </html>
