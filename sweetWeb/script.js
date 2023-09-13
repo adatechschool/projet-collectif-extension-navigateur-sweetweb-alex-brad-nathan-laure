@@ -57,12 +57,11 @@ function stockLocalStorage(newBanWord, storedStrings) {
 }
 
 function addToBanWords() {
-    let storedWords = localStorage.storedStrings
-    console.log(typeof (storedWords))
-    console.log(banWords)
-    banWords.push(storedWords)
-}
-
+    let storedWords = localStorage.storedStrings;
+    console.log(typeof (storedWords));
+    console.log(banWords);
+    banWords.push(storedWords);
+};
 
 
 const toReplace = ""
@@ -88,7 +87,7 @@ function replaceText(element, toReplace) {
         for (i = 0; i < banWords.length; i++) {
             toReplace = insertInRegex(banWords[i])
             console.log(toReplace)
-            element.textContent = element.textContent.replace(toReplace, '💗💗😻💗💗');
+            element.textContent = element.textContent.replace(toReplace, '🦄💗😻💗🐕💗');
         }
     }
 }
