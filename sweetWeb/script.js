@@ -95,7 +95,6 @@ function replaceText(element, toReplace) {
             toReplace = insertInRegex(banWords[i])
             console.log(toReplace)
             element.textContent = element.textContent.replace(toReplace, '💗💗😻💗💗');
-            banWords = [...banWords, ...storedWords];
         }
     }
 }
